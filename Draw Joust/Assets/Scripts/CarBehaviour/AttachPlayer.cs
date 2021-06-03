@@ -3,13 +3,14 @@ using UnityEngine;
 public class AttachPlayer : MonoBehaviour
 {
     public Rigidbody _rigidbody;
+    public Collider playerColl;
 
     private void Start()
     {
         GameManager.Instance.gameStartedEvent.AddListener(GameStart);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         ConfigurableJoint otherJoint = collision.gameObject.AddComponent<ConfigurableJoint>();
         otherJoint.connectedBody = _rigidbody;
@@ -27,6 +28,8 @@ public class AttachPlayer : MonoBehaviour
 
         otherJoint.xDrive = jointDriveX;
         otherJoint.yDrive = jointDriveY;
+        playerColl.isTrigger = false;
+        gameObject.layer = 8;
     }
 
     void GameStart()

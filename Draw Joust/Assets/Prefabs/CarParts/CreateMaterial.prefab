@@ -199,7 +199,7 @@ ConfigurableJoint:
     maximumForce: 3.4028233e+38
   m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
-  m_RotationDriveMode: 0
+  m_RotationDriveMode: 1
   m_AngularXDrive:
     serializedVersion: 3
     positionSpring: 1000
@@ -220,8 +220,8 @@ ConfigurableJoint:
   m_ProjectionAngle: 180
   m_ConfiguredInWorldSpace: 0
   m_SwapBodies: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
+  m_BreakForce: 5000
+  m_BreakTorque: 1000
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 1

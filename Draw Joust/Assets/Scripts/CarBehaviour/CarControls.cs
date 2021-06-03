@@ -6,7 +6,7 @@ public class CarControls : MonoBehaviour
     Rigidbody rightWealRB, leftWealRB;
     public float SpeedRate;
 
-    private void Update()
+    private void FixedUpdate()
     {
 
         float inputMoves = Input.GetAxis("Horizontal");
